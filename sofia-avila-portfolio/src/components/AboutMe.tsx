@@ -14,9 +14,10 @@ const AboutMe = () => {
     >
       <Box
         sx={{
-          width: "50rem", // Ancho de la caja de la imagen
-          height: "50rem", // Alto de la caja de la imagen
-          paddingRight: "2rem", // Espacio entre la imagen y el texto
+          width: "50rem", 
+          height: "50rem", 
+          flexShrink: 0,
+          paddingRight: '5rem'
         }}
       >
         <img
@@ -25,30 +26,30 @@ const AboutMe = () => {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </Box>
-      <Box sx={{ paddingLeft: "1rem" }}>
+      <Box sx={{ paddingLeft: "5rem" }}>
         <Typography
           variant="h2"
-          sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem" }}
+          sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem", fontWeight: 'bold' }}
         >
-          Sofia
+          SOFIA
         </Typography>
         <Typography
           variant="h2"
-          sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem" }}
+          sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem", fontWeight: 'bold' }}
         >
-          Agostina
+          AGOSTINA
         </Typography>
         <Typography
           variant="h2"
-          sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem" }}
+          sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem", fontWeight: 'bold' }}
         >
-          Avila
+          AVILA
         </Typography>
         <Typography
           sx={{ color: "white", textAlign: "left", marginBottom: "0.5rem", maxWidth: '50%' }}
         >
           Mi interés por el desarrollo surgió a partir de que comencé en 2020
-          mis estudios universitarios en el 2020. Actualmente soy ingeniera de
+          mis estudios universitarios. Actualmente soy ingeniera de
           software, especializada en React y Spring Boot.{" "}
         </Typography>
 

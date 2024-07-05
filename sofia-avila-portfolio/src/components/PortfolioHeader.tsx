@@ -1,18 +1,15 @@
 import * as React from "react";
 import { Box, Typography } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
 
-interface PortfolioHeaderProps {
-  onDrawerToggle?: () => void;
-}
+const textStyles = {
+  color: "white",
+  marginRight: 5,
+  fontSize: '1rem',
+  cursor: 'pointer',
+};
 
-const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({}) => {
-  const textStyles = {
-    color: "white",
-    marginRight: 5,
-    fontSize: '1rem',
-    
-  };
-
+const PortfolioHeader: React.FC = () => {
   return (
     <Box
       sx={{
@@ -24,29 +21,41 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({}) => {
       }}
     >
       <Box>
-        <Typography variant="h6" sx={{ ...textStyles, marginLeft: 2, fontWeight: 600 }}>
+        <Typography variant="h6" sx={{ ...textStyles, marginLeft: 5 }}>
           SOFIA AGOSTINA AVILA
         </Typography>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography variant="body1" sx={textStyles}>
-          Sobre mí
-        </Typography>
-        <Typography variant="body1" sx={textStyles}>
-          Experiencia
-        </Typography>
-        <Typography variant="body1" sx={textStyles}>
-          Herramientas
-        </Typography>
-        <Typography variant="body1" sx={textStyles}>
-          Estudios
-        </Typography>
-        <Typography variant="body1" sx={textStyles}>
-          Proyectos
-        </Typography>
-        <Typography variant="body1" sx={textStyles}>
-          Contacto
-        </Typography>
+        <ScrollLink to="about-me" smooth={true} duration={500}>
+          <Typography variant="body1" sx={textStyles}>
+            Sobre mí
+          </Typography>
+        </ScrollLink>
+        <ScrollLink to="experience" smooth={true} duration={500}>
+          <Typography variant="body1" sx={textStyles}>
+            Experiencia
+          </Typography>
+        </ScrollLink>
+        <ScrollLink to="skills" smooth={true} duration={500}>
+          <Typography variant="body1" sx={textStyles}>
+            Herramientas
+          </Typography>
+        </ScrollLink>
+        <ScrollLink to="studies" smooth={true} duration={500}>
+          <Typography variant="body1" sx={textStyles}>
+            Estudios
+          </Typography>
+        </ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={500}>
+          <Typography variant="body1" sx={textStyles}>
+            Proyectos
+          </Typography>
+        </ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500}>
+          <Typography variant="body1" sx={textStyles}>
+            Contacto
+          </Typography>
+        </ScrollLink>
       </Box>
     </Box>
   );
